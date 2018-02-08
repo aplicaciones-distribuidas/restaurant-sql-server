@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<property name="connection.driver_class">net.sourceforge.jtds.jdbc.Driver</property>
+		<property name="connection.url">jdbc:sqlserver://192.168.1.103:1433;database=restaurant</property>
+		<property name="connection.username">SA</property>
+		<property name="connection.password">fo0.b4R_84z</property>
+		<property name="connection.pool_size">2</property>
+		<property name="connection.autocommit">true</property>
+
+		<property name="dialect">org.hibernate.dialect.SQLServerDialect</property>
+
+		<property name="current_session_context_class">thread</property>
+
+		<property name="cache.use_query_cache">false</property>
+		<property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+
+		<property name="show_sql">true</property>
+		<property name="format_sql">true</property>
+
+		<property name="hbm2ddl.auto">create-drop</property>
+
+		<property name="max_fetch_depth">1</property>
+		<property name="jdbc.use_streams_for_binary">true</property>
+		<property name="jdbc.batch_size">20</property>
+		<property name="transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>
+
+		<mapping class="entities.AreaEntity" />
+		<mapping class="entities.CajaEntity" />
+		<mapping class="entities.CartaEntity" />
+		<mapping class="entities.ItemCartaEntity" />
+		<mapping class="entities.ProductoEntity" />
+		<mapping class="entities.InsumoProductoEntity" />
+		<mapping class="entities.InsumoEntity" />
+		<mapping class="entities.ProveedorEntity" />
+		<mapping class="entities.ComandaEntity" />
+		<mapping class="entities.ItemPedidoEntity" />
+		<mapping class="entities.ComisionEntity" />
+		<mapping class="entities.DepositoAreaEntity" />
+		<mapping class="entities.DepositoEntity" />
+		<mapping class="entities.DepositoGeneralEntity" />
+		<mapping class="entities.EmpleadoEntity" />
+		<mapping class="entities.PedidoReposicionEntity" />
+		<mapping class="entities.RolEntity" />
+		<mapping class="entities.DepositoRestaurantEntity" />
+		<mapping class="entities.DirectoEntity" />
+		<mapping class="entities.FacturaEntity" />
+		<mapping class="entities.FormaPagoEntity" />
+		<mapping class="entities.ItemFacturaEntity" />
+		<mapping class="entities.SectorSalonEntity" />
+		<mapping class="entities.MesaEntity" />
+		<mapping class="entities.MesaOcupacionEntity" />
+		<mapping class="entities.PedidoEntity" />
+		<mapping class="entities.ReservaEntity" />
+		<mapping class="entities.SemiElaboradoEntity" />
+		<mapping class="entities.SucursalEntity" />
+		<mapping class="entities.TareaEntity" />
+	</session-factory>
+</hibernate-configuration>
